@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu Comunidad – Registro</title>
+  <style>
+    :root {
+      --primary:#1565D8;
+      --primary-dark:#0D47A1;
+      --whatsapp:#25D366;
+      --telegram:#229ED9;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --text:#152238;
+      --muted:#6b7280;
+      --warn-bg:#fff3cd;
+      --warn-text:#8a5b00;
+      --radius:16px;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);}
+    .container{max-width:900px;margin:24px auto;padding:0 16px;}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 8px 24px rgba(2,12,27,.06);padding:24px;}
+    h1{letter-spacing:.02em;line-height:1.15;margin:0 0 16px;font-weight:800;font-size:clamp(28px,5vw,44px);color:#0c5881;text-align:center;}
+    .lead{font-size:18px;line-height:1.6;color:#334155;text-align:center;max-width:760px;margin:0 auto 22px;}
+    .notice{background:var(--warn-bg);color:var(--warn-text);border-radius:12px;padding:16px 18px;margin:16px 0;font-weight:700;text-align:center;}
+    label{display:block;font-weight:700;margin:14px 0 6px;}
+    input,select,textarea{width:100%;padding:14px 16px;border:1px solid #d1d5db;border-radius:12px;background:#fff;font-size:16px;outline:none;text-transform:uppercase;}
+    input[readonly]{background:#eef2ff;color:#475569;}
+    input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(21,101,216,.25);}
+    .muted{font-size:13px;color:var(--muted);}
+    .grid-2{display:grid;gap:16px;}
+    @media(min-width:700px){.grid-2{grid-template-columns:repeat(2,1fr);}}
+    .services-grid{display:flex;flex-wrap:wrap;gap:16px;}
+    .service-item{flex:0 0 calc(50% - 16px);display:flex;gap:8px;align-items:flex-start;margin:0;line-height:1.4;}
+    .actions{display:flex;justify-content:center;gap:12px;margin-top:18px;flex-wrap:wrap;}
+    .btn{appearance:none;border:0;border-radius:14px;padding:14px 18px;font-weight:800;letter-spacing:.02em;cursor:pointer;display:inline-block;}
+    .btn-primary{background:var(--primary);color:#fff;}
+    .btn-primary:hover{background:var(--primary-dark);}
+    .btn-wa{background:var(--whatsapp);color:#fff;}
+    .btn-tg{background:var(--telegram);color:#fff;}
+    .hidden{display:none !important;}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:1000;}
+    .modal.hidden{display:none !important;}
+    .modal-card{background:#fff;max-width:720px;width:92%;max-height:85vh;overflow:auto;border-radius:16px;padding:20px;position:relative;}
+    .modal-card h2{margin-top:0;font-size:24px;font-weight:800;}
+    .modal-card p{font-size:16px;line-height:1.5;margin-bottom:12px;}
+    .modal-card .close-btn{position:sticky;bottom:8px;display:block;margin-left:auto;padding:10px 16px;border:none;background:var(--primary);color:#fff;border-radius:10px;cursor:pointer;font-weight:700;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+  <h1 style="font-size:24px; font-weight:800; color:#0c5881; text-align:center; line-height:1.4; border:3px solid red; padding:12px; border-radius:8px; text-transform:uppercase;">
+  FORMULARIO GRATUITO NANCY CASALLAS
+</h1>
+
+<p class="lead" style="margin-top:12px; text-align:center; font-size:16px;">
+  SOLO PARA PERSONAS QUE NO TIENEN COMPRADA NINGUNA PARTICIPACIÓN.
+</p>
+
+<p class="lead" style="margin-top:12px; text-align:justify; font-size:16px;">
+  Regístrese y haga parte de la ayuda humanitaria que se hará a través de la 
+  <b>Fundación CADENA DE BENDICIONES</b>, cuya benefactora es 
+  <b>Doris Bahos Soto</b>.
+</p>
+
+<div class="notice" style="background:#fff3cd; color:#8a5b00; border-radius:12px; padding:16px; font-weight:700; text-align:center; line-height:1.6;">
+  💬📱 UNETE AL GRUPO DE 
+  <span style="color:#229ED9;">TELEGRAM</span> 
+  O EN SU DEFECTO AL GUPO DE 
+  <span style="color:#25D366;">WHATSAPP</span>.<br>
+  <span style="color:red; font-weight:bold;">
+    (SEGUN SEA TU CASO)
+  </span>
+</div>
+
+      <div id="formWrapper">
+      <form id="formRegistro" autocomplete="off">
+        <h2 style="font-size:22px;font-weight:800;margin:24px 0 12px">Formulario de registro</h2>
+
+        <!-- ✅ NUEVO: Pregunta obligatoria (texto a la izquierda, botón a la derecha) -->
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0;">
+          <label for="nueva_persona" style="margin:0;font-weight:700;">
+            SOY PERSONA NUEVA Y NO HE COMPRADO NINGUNA PARTICIPACIÓN
+
+          </label>
+          <input
+  id="nueva_persona"
+  name="nueva_persona"
+  type="checkbox"
+  required
+/>
+        </div>
+
+        <label for="email">Correo electronico</label>
+        <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required style="text-transform:lowercase;" />
+   
+        <!-- Primer Nombre -->
+<div class="form-group">
+  <label for="primer_nombre">Primer nombre</label>
+  <input
+    type="text"
+    id="primer_nombre"
+    name="primer_nombre"
+    placeholder="Escriba aqui"
+    required
+  />
+</div>
+
+<!-- Segundo Nombre -->
+<div class="form-group">
+  <label for="segundo_nombre">Segundo nombre</label>
+  <input
+    type="text"
+    id="segundo_nombre"
+    name="segundo_nombre"
+    placeholder="Si no tiene, escriba N/A"
+    required
+  />
+</div>
+
+<!-- Apellidos -->
+<div class="form-group">
+  <label for="apellidos">Apellidos</label>
+  <input
+    type="text"
+    id="apellidos"
+    name="apellidos"
+    placeholder="Escriba aqui"
+    required
+  />
+</div>
+
+<!-- Tipo de documento -->
+<div class="form-group">
+  <label for="tipo_documento">Tipo de documento</label>
+  <select
+    id="tipo_documento"
+    name="tipo_documento"
+    required
+  >
+    <option value="">Seleccione una opcion</option>
+    <option value="CEDULA DE CIUDADANIA">CEDULA DE CIUDADANIA</option>
+    <option value="CEDULA VENEZOLANA">CEDULA VENEZOLANA</option>
+    <option value="DNI">DNI</option>
+    <option value="IDMEX">IDMEX</option>
+    <option value="INE">INE</option>
+    <option value="LICENCIA DE CONDUCIR">LICENCIA DE CONDUCIR</option>
+    <option value="PASAPORTE">PASAPORTE</option>
+    <option value="OTRO">OTRO</option>
+  </select>
+</div>
+
+        <label for="cedula">Documento de Identidad de tu Pais (Sin Puntos) DNI o Pasaporte</label>
+        <input id="cedula" name="cedula" type="text" pattern="[A-Za-z0-9\-]+" required title="Solo letras, números o guiones" />
+
+        <label for="nac">Fecha de nacimiento</label>
+        <input id="nac" name="nac_fecha" type="date" required />
+        <label for="edad">Edad actual</label>
+        <input id="edad" name="edad" readonly />
+        
+        <h2 style="font-size:22px;font-weight:800;margin:24px 0 12px">Residencia</h2>
+        <div class="form-group">
+  <label>Pais</label>
+<select id="pais" name="pais" required>
+  <option value="">Seleccione</option>
+</select>
+<label>Departamento / Estado</label>
+<select id="estado" name="departamento" required>
+  <option value="">Seleccione</option>
+</select>
+<label>Ciudad</label>
+<select id="ciudad" name="ciudad" required>
+  <option value="">Seleccione</option>
+</select>
+        
+        <!-- Indicativo -->
+<div class="form-group">
+  <label for="indicativo">Indicativo</label>
+  <select id="indicativo" name="indicativo" required>
+    <!-- vacío a propósito, JS lo llena -->
+  </select>
+</div>
+
+<!-- Celular -->
+<div class="form-group">
+  <label for="celular">Celular</label>
+  <input
+    type="tel"
+    id="celular"
+    name="celular"
+    placeholder="Ej: 3001234567 (sin indicativo)"
+    required
+  />
+  <small>No incluya el indicativo del país</small>
+</div>
+
+<!-- Código Postal -->
+<div class="form-group">
+  <label for="codigo_postal">Código postal</label>
+  <input
+    type="text"
+    id="codigo_postal"
+    name="codigo_postal"
+    placeholder="Opcional"
+  />
+</div>
+
+        <label for="barrio">Barrio si no tiene coloque N/A</label>
+        <input id="barrio" name="barrio" required />
+        <label for="dir">Direccion</label>
+        <input id="dir" name="direccion" required />
+
+        <h2 style="font-size:22px;font-weight:800;margin:24px 0 12px">Caracterización socioeconómica</h2>
+
+        <label for="escolaridad">Grado de escolaridad</label>
+        <select id="escolaridad" name="escolaridad" required>
+          <option value="">Seleccione…</option>
+          <option>No tengo estudios</option>
+          <option>Primaria</option>
+          <option>Secundaria</option>
+          <option>Técnico</option>
+          <option>Tecnológico</option>
+          <option>Universitario</option>
+        </select>
+
+        <label for="genero">Genero</label>
+        <select id="genero" name="genero" required>
+          <option value="">Seleccione...</option>
+          <option>Masculino</option>
+          <option>Femenino</option>
+          <option>Prefiero no responder</option>
+        </select>
+
+        <!-- 🔹 TELEGRAM inteligente -->
+        <label for="usuario_telegram">Usuario de Telegram</label>
+        <input
+          id="usuario_telegram"
+          name="usuario_telegram"
+          placeholder="@Usuario celular o N/A si no tiene"
+          required
+          pattern="(^@[A-Za-z0-9_]{3,32}$|^N/A$|^[0-9]{7,15}$)"
+          title="Escriba su usuario válido (@nombre), número o N/A si no tiene"
+          style="text-transform:none;"
+        />
+
+        <label>¿Tiene vivienda propia?</label>
+        <div style="display:flex;gap:18px;">
+          <label><input type="radio" name="vivienda_propia" value="SI" required /> Sí</label>
+          <label><input type="radio" name="vivienda_propia" value="NO" required /> No</label>
+        </div>
+
+        <label for="zona">Zona de residencia</label>
+        <select id="zona" name="zona" required>
+          <option value="">Seleccione...</option>
+          <option>CAMPO</option>
+          <option>CIUDAD</option>
+          <option>PUEBLO</option>
+          <option>VEREDA</option>
+          <option>FINCA</option>
+        </select>
+
+        <label for="estrato">Estrato social</label>
+  <select id="estrato" name="estrato" required>
+    <option value="">Seleccione</option>
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+  </select>
+
+        <label for="conviven">¿Cuántas Personas viven con usted?</label>
+  <select id="conviven" name="personas_en_hogar" required>
+  <option value="">Seleccione</option>
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+  </select>
+
+  <label for="conv_trab">¿De las personas que viven con usted cuantas trabajan?</label>
+  <select id="conv_trab" name="personas_trabajan" required>
+  <option value="">Seleccione</option>
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+  </select>
+  
+  <label for="conv_may">¿De las personas que viven con usted cuantos son adultos mayores de 60 años?</label>
+  <select id="conv_may" name="adultos_mayores" required>
+    <option value="">Seleccione</option>
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+  </select>
+  
+  <label for="conv_men">¿De las personas que viven con usted cuántos son menores de 18 años?</label>
+  <select id="conv_men" name="menores" required>
+    <option value="">Seleccione</option>
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+  </select>
+
+        <!-- SERVICIOS -->
+        <label>¿Con que servicios cuenta?</label>
+  <div class="services-grid" style="display:flex;flex-direction:column;gap:6px;">
+    <label><input type="checkbox" name="servicios" value="ACUEDUCTO"> Acueducto</label>
+    <label><input type="checkbox" name="servicios" value="ENERGÍA"> Energia</label>
+    <label><input type="checkbox" name="servicios" value="GAS NATURAL"> Gas Natural</label>
+    <label><input type="checkbox" name="servicios" value="GAS PROPANO"> Gas Propano</label>
+    <label><input type="checkbox" name="servicios" value="ALCANTARILLADO"> Alcantarillado</label>
+    <label><input type="checkbox" name="servicios" value="ALUMBRADO"> Alumbrado</label>
+    <label><input type="checkbox" name="servicios" value="NINGUNO" id="servicio_ninguno"> No tengo ningun servicio</label>
+  </div>
+
+        <label>¿Viven con usted personas con discapacidad?</label>
+  <div style="display:flex;gap:18px;">
+    <label><input type="radio" name="discap" value="SI" required> Sí</label>
+    <label><input type="radio" name="discap" value="NO" required /> No</label>
+  </div>
+  <div id="cualWrap" class="hidden">
+    <label for="cual">Especifique la discapacidad</label>
+    <input id="cual" name="detalle_discapacidad" placeholder="Describa" />
+  </div>
+
+        <h2 style="font-size:22px;font-weight:800;margin:24px 0 12px">Intereses</h2>
+        <label for="hobbies">Hobbies o pasatiempos</label>
+        <textarea id="hobbies" name="hobbies" rows="3" placeholder="DEPORTES, MÚSICA, ETC." style="text-transform:uppercase;" required></textarea>
+
+        <label for="idea">Si recibiera apoyo economico, ¿que emprendimiento desarrollaria?</label>
+        <textarea id="idea" name="emprendimiento" rows="3" placeholder="DESCRIBA SU IDEA" style="text-transform:uppercase;" required></textarea>
+  
+       <h2 style="font-size:22px;font-weight:bold;margin-top:25px;">Escriba una referencia personal o familiar</h2>
+
+<label for="refNom">Nombre completo</label>
+<input
+  id="refNom"
+  name="ref_nombre"
+  placeholder="Nombre de la persona que lo refirió"
+  required
+/>
+
+<!-- Telegram de referencia -->
+<label for="refTg">Usuario o numero de Telegram de la referencia</label>
+<input
+  id="refTg"
+  name="ref_telegram"
+  placeholder="@Usuario o N/A si no tiene"
+  pattern="^(@?[A-Za-z0-9_]{3,32}|[Nn]/?[Aa]|[0-9]{7,15})$"
+  title="Escriba su usuario válido (@nombre), número o N/A si no tiene"
+  autocomplete="off"
+  autocapitalize="none"
+  spellcheck="false"
+  inputmode="text"
+  style="text-transform:none;"
+  required
+/>
+
+<!-- WhatsApp de referencia -->
+<label for="refWa">Numero de WhatsApp de la referencia</label>
+<input
+  id="refWa"
+  name="ref_whatsapp"
+  placeholder="3001234567 o N/A si no tiene"
+  pattern="(^[0-9]{7,15}$|^N/A$)"
+  title="Escriba su número de WhatsApp o N/A si no tiene"
+  required
+/>
+
+        <div style="display:flex;gap:10px;align-items:center;margin-top:16px">
+          <input id="chkAcepto" type="checkbox" required />
+          <label for="chkAcepto" style="margin:0;font-weight:600">
+            Acepto el tratamiento de datos personales y la
+            <a href="javascript:void(0)" onclick="abrirPrivacidad()">Política de Privacidad</a>.
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">ENVIAR REGISTRO</button>
+        </div>
+      </form>
+      </div>
+
+      <div id="gracias" class="hidden" style="text-align:center;margin-top:20px;">
+        <h2 style="color:green;">🎉 ¡Gracias por registrarte!</h2>
+        <p>Tu información fue recibida correctamente.</p>
+      </div>
+
+      <div id="accesos" class="hidden" style="text-align:center;margin-top:15px;">
+        <div class="actions">
+          <a id="btnWA" class="btn btn-wa" target="_blank">WhatsApp</a>
+          <a id="btnTG" class="btn btn-tg" target="_blank">Telegram</a>
+        </div>
+      </div>
+      <div class="card" style="margin-top:22px">
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:8px">Verifica tu registro</h2>
+        <p class="muted">Por privacidad, esta verificación <b>solo confirma</b> existencia y la última fecha. No mostramos nombres, direcciones ni correo.</p>
+        <div class="grid-2">
+          <div>
+            <label for="verCedula">Digita tu cédula</label>
+            <input id="verCedula"type="text"placeholder="Ej: ABC-12345 o 123456789"pattern="[A-Za-z0-9\-]+"style="text-transform:uppercase;"/>
+          </div>
+          <div class="actions" style="align-items:center">
+            <button id="btnVerificar" class="btn btn-primary" type="button">VERIFICAR</button>
+          </div>
+        </div>
+        <div id="verResultado" class="muted" style="margin-top:10px"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de Política de Privacidad completa -->
+  <div id="modal-priv" class="modal hidden">
+<div class="modal-card">
+  <h2 style="margin-top:0;">TERMINOS,  CONDICIONES Y POLITICA DE TRATAMIENTO DE LA INFORMACION Y DATOS PERSONALES</h2>
+
+  <p>
+    El acceso y participación en los procesos organizados por <strong>NANCY CASALLAS CASALLAS</strong>,
+    implica la aceptación plena de los presentes Términos y Condiciones y Política de Tratamiento de la Información
+    y Datos Personales, por parte de los participantes. Si no está de acuerdo con estos términos, se recomienda
+    abstenerse de participar.
+  </p>
+
+  <h3>1. Responsable del Tratamiento</h3>
+  <p>
+    Nancy Casallas Casallas, con cédula de ciudadanía número 31900922, correo electrónico
+    <a href="mailto:administracion@misemilla.org">administracion@misemilla.org</a>, es responsable del tratamiento
+    de los datos personales aquí recopilados, en cumplimiento de la Ley 1581 de 2012 y demás normas aplicables
+    de protección de datos en Colombia.
+  </p>
+
+  <h3>2. Datos Personales a Recopilar</h3>
+  <p>La Responsable recopilará, almacenará y tratará los siguientes datos:</p>
+  <ul>
+    <li><strong>Datos de identificación y contacto:</strong> Correo electrónico, Nombre y apellido, Documento de identidad (cédula, pasaporte, etc.), Indicativo del país y número de celular, Usuario de Telegram, País, departamento, ciudad, barrio y dirección de residencia, Nombre de usuario de Telegram y WhatsApp de referencia.</li>
+    <li><strong>Datos demográficos:</strong> Fecha de nacimiento, Edad actual, Género (Masculino, Femenino, Prefiero no responder), Escolaridad, Estrato socioeconómico, Zona de residencia, Tipo de vivienda (propia o arrendada).</li>
+    <li><strong>Datos familiares y sociales:</strong> Personas en el hogar, Personas que trabajan en el hogar, Adultos mayores convivientes, Menores de 18 convivientes, Personas con discapacidad en el hogar y tipo de discapacidad, Servicios públicos disponibles, Hobbies o pasatiempos, Idea de emprendimiento.</li>
+    <li><strong>Datos de aceptación:</strong> Manifestación expresa de aceptación de esta política de datos.</li>
+  </ul>
+
+  <h3>3. Finalidad del Tratamiento</h3>
+  <ol>
+    <li>Identificación y caracterización de los participantes para aplicar a diferentes beneficios y/o ayudas que podrían ser de carácter educativo, formativos, económicos, financieros, de promoción, en especie y otros.</li>
+    <li>Verificación de identidad y existencia de los participantes.</li>
+    <li>Elaboración de informes estadísticos y de impacto social, siempre de forma agregada o anonimizada.</li>
+    <li>Comunicación con los participantes para informar sobre procesos, convocatorias, promociones y beneficios.</li>
+  </ol>
+
+  <h3>4. Datos Sensibles</h3>
+  <p>
+    Algunos de los datos solicitados son sensibles (p. ej., información sobre discapacidad, condiciones de vivienda).
+    Estos datos solo se utilizarán para fines de priorización de beneficios y/o ayudas. La Responsable garantizará
+    un tratamiento especial y confidencial de esta información.
+  </p>
+
+  <h3>5. Derechos del Titular de los Datos</h3>
+  <ul>
+    <li>Conocer, actualizar y rectificar sus datos.</li>
+    <li>Solicitar prueba de la autorización otorgada.</li>
+    <li>Ser informado sobre el uso que se le ha dado a sus datos.</li>
+    <li>Presentar quejas ante la Superintendencia de Industria y Comercio.</li>
+    <li>Revocar la autorización y/o solicitar la supresión de sus datos, salvo cuando exista un deber legal o contractual de conservarlos.</li>
+  </ul>
+  <p>Las solicitudes podrán hacerse a través del correo <a href="mailto:administracion@misemilla.org">administracion@misemilla.org</a>.</p>
+
+  <h3>6. Conservación y Seguridad de los Datos</h3>
+  <ul>
+    <li>Los datos serán conservados mientras existan beneficios y/o ayudas o una obligación legal de conservación.</li>
+    <li>Se aplicarán medidas de seguridad físicas, técnicas y administrativas para evitar pérdida, acceso no autorizado, alteración o uso indebido.</li>
+    <li>Solo el personal autorizado y los aliados estrictamente necesarios podrán acceder a la información.</li>
+  </ul>
+
+  <h3>7. Transferencia y Transmisión de Datos</h3>
+  <ul>
+    <li>Podrán ser compartidos con personas naturales o jurídicas, entidades públicas o privadas que intervengan en los diferentes procesos y fines establecidos, siempre bajo acuerdos de confidencialidad y solo para los fines aquí establecidos.</li>
+    <li>Para fines promocionales y comerciales de productos y/o servicios de diferentes actividades económicas.</li>
+    <li>En caso de transferencias internacionales, se garantizará que el receptor cumpla con niveles adecuados de protección de datos.</li>
+  </ul>
+
+  <h3>8. Consentimiento</h3>
+  <p>
+    El tratamiento de los datos personales requiere del consentimiento libre, previo, expreso, voluntario e informado del titular,
+    el cual se manifiesta mediante la selección de la casilla: “Acepto Términos y Condiciones y Política de Tratamiento de la
+    Información y Datos Personales”.
+  </p>
+
+  <h3>9. Modificaciones a la Política</h3>
+  <p>
+    La Responsable podrá modificar esta política en cualquier momento. Los cambios serán informados a través de los medios
+    oficiales de contacto.
+  </p>
+
+  <h3>10. Contacto</h3>
+  <p>
+    Para ejercer los derechos sobre sus datos personales, el titular podrá comunicarse con:
+    <br>Correo: <a href="mailto:administracion@misemilla.org">administracion@misemilla.org</a>
+  </p>
+
+  <!-- Botón Cerrar dentro de la tarjeta modal -->
+  <button class="close-btn" type="button" onclick="cerrarPrivacidad()">Cerrar</button>
+    </div>
+  </div>
+
+<script type="module">
+  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+  const supabaseUrl = 'https://hybozykbfehfjldhaxpp.supabase.co';
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5Ym96eWtiZmVoZmpsZGhheHBwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkzMjU0OTMsImV4cCI6MjA3NDkwMTQ5M30.Bj1Jl3-g0gyp1UwsiK-cwjS8Cm2z7Il4_jZ-tCQhbwM';
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  const WHATSAPP_NUMBER = 'https://chat.whatsapp.com/DgKigARt04S7Lcaf3SsbIn';
+  const TELEGRAM_LINK = 'https://t.me/+IXBDgE1HvZc0NmUx';
+  const $ = (s) => document.querySelector(s);
+  const show = (el) => el && el.classList.remove('hidden');
+  const hide = (el) => el && el.classList.add('hidden');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnWA = document.getElementById('btnWA');
+  if (btnWA) {
+    btnWA.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('https://chat.whatsapp.com/DgKigARt04S7Lcaf3SsbIn', '_blank');
+    });
+  }
+});
+
+  // === Auto uppercase excepto algunos campos ===
+const noUpper = new Set([
+  'email',
+  'pais_code',
+  'cel',
+  'refTg',
+  'refWa',
+  'usuario_telegram'  // <-- aquí se excluye Telegram
+]);
+  document.addEventListener('input', (e) => {
+    const el = e.target;
+    if ((el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') && !noUpper.has(el.id)) {
+      const start = el.selectionStart, end = el.selectionEnd;
+      el.value = el.value.toUpperCase();
+      if (document.activeElement === el) el.setSelectionRange(start, end);
+    }
+  });
+  
+  
+
+  // === Validación Servicios Públicos (corregido) ===
+  document.querySelectorAll('.services-grid input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const ninguno = document.getElementById('servicio_ninguno');
+      const otros = document.querySelectorAll('.services-grid input[type="checkbox"]:not(#servicio_ninguno)');
+
+      if (cb.id === 'servicio_ninguno' && cb.checked) {
+        // Si marcan "No tengo servicios públicos", desmarcar todos los demás
+        otros.forEach(o => o.checked = false);
+      } else if (cb.id !== 'servicio_ninguno' && cb.checked) {
+        // Si marcan otro servicio, desmarcar "No tengo servicios públicos"
+        ninguno.checked = false;
+      }
+    });
+  });
+
+  // === Calcular edad ===
+  $('#nac').addEventListener('change', () => {
+    const val = $('#nac').value;
+    const dob = val ? new Date(val + 'T00:00:00') : null;
+    if (!dob || isNaN(dob.getTime())) { $('#edad').value = ''; return; }
+    const now = new Date();
+    let age = now.getFullYear() - dob.getFullYear();
+    const m = now.getMonth() - dob.getMonth();
+    if (m < 0 || (m === 0 && now.getDate() < dob.getDate())) age--;
+    $('#edad').value = String(age);
+  });
+// === Bloquear el signo + en el campo de celular ===
+$('#celular').addEventListener('input', (e) => {
+  e.target.value = e.target.value.replace(/\+/g, '');
+});
+
+  // === Mostrar campo "¿Cuál?" solo si hay discapacidad ===
+  document.querySelectorAll('input[name="discap"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      const val = document.querySelector('input[name="discap"]:checked').value;
+      if (val === 'SI') show($('#cualWrap')); else { hide($('#cualWrap')); $('#cual').value = ''; }
+    });
+  });
+
+  // === Modal ===
+  window.abrirPrivacidad = () => show($('#modal-priv'));
+  window.cerrarPrivacidad = () => hide($('#modal-priv'));
+  
+// === MAPA PAÍS → INDICATIVO ===
+const mapaIndicativos = {
+  COLOMBIA: "57",
+  MEXICO: "52",
+  ARGENTINA: "54",
+  PERU: "51",
+  CHILE: "56",
+  ECUADOR: "593",
+  VENEZUELA: "58",
+  ESPANA: "34",
+  "ESTADOS UNIDOS": "1",
+  CANADA: "1",
+  BRASIL: "55"
+};
+
+// === PAÍSES QUE USAN CÓDIGO POSTAL ===
+const paisesConCP = new Set([
+  "COLOMBIA",
+  "MEXICO",
+  "ARGENTINA",
+  "CHILE",
+  "PERU",
+  "ESTADOS UNIDOS",
+  "CANADA",
+  "ESPANA",
+  "FRANCIA",
+  "ALEMANIA",
+  "BRASIL"
+]);
+
+// === AUTO CONFIGURACIÓN SEGÚN PAÍS ===
+$('#pais').addEventListener('change', () => {
+  const paisNormalizado = $('#pais')
+    .value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toUpperCase();
+
+  // INDICATIVO
+  const selectIndicativo = $('#indicativo');
+  const indicativo = mapaIndicativos[paisNormalizado] || '';
+  selectIndicativo.value = indicativo;
+
+const inputCP = document.querySelector('#codigo_postal');
+if (inputCP) {
+  if (paisesConCP.has(paisNormalizado)) {
+    inputCP.disabled = false;
+    inputCP.required = true;
+  } else {
+    inputCP.value = '';
+    inputCP.disabled = true;
+    inputCP.required = false;
+  }
+}
+});
+
+// Ejecutar al cargar si ya hay país seleccionado
+if ($('#pais').value) {
+  $('#pais').dispatchEvent(new Event('change'));
+}
+
+// === NORMALIZACIÓN WHATSAPP ===
+function normalizarWhatsapp() {
+  const indicativoInput = document.querySelector('#indicativo');
+  const celularInput = document.querySelector('#celular');
+
+  if (!indicativoInput || !celularInput) {
+    return null;
+  }
+
+  const indicativoRaw = indicativoInput.value;
+  const celularRaw = celularInput.value;
+
+  if (!indicativoRaw || !celularRaw) {
+    return null;
+  }
+
+  const indicativo = indicativoRaw.replace(/\D/g, '');
+  const celular = celularRaw.replace(/\D/g, '');
+
+  if (celular.length < 7) {
+    return null;
+  }
+
+  const numeroCompleto = indicativo + celular;
+  const ts = new Date().toISOString().replace(/[-:T.Z]/g, '').slice(0, 14);
+  const whatsapp_id = `WAPP-${numeroCompleto}-${ts}`;
+
+  return {
+    indicativo,
+    celular,
+    numeroCompleto,
+    whatsapp_id
+  };
+}
+
+// === NORMALIZAR TEXTO (FUNCIÓN BASE) ===
+function normalizarTexto(txt) {
+  if (!txt) return null;
+  return txt
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim()
+    .toUpperCase();
+}
+
+// === SAFE RADIO (NO ROMPE SUBMIT) ===
+const safeRadio = (name, def = null) => {
+  const el = document.querySelector(`input[name="${name}"]:checked`);
+  return el ? el.value : def;
+};
+
+// === Envío del formulario ===
+$('#formRegistro').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // 🔒 BOTÓN (SIEMPRE DISPONIBLE PARA RESTAURAR)
+  const btn = document.querySelector('#formRegistro button[type="submit"]');
+
+  // === WhatsApp normalizado ===
+  const waData = normalizarWhatsapp();
+  if (!waData) {
+    alert('Debe seleccionar indicativo y escribir un número de celular válido');
+    btn.disabled = false;
+    btn.textContent = 'ENVIAR REGISTRO';
+    return;
+  }
+
+  // === VALIDACIONES CRÍTICAS ===
+
+  // País obligatorio
+  if (!$('#pais').value) {
+    alert('Debe seleccionar un país');
+    btn.disabled = false;
+    btn.textContent = 'ENVIAR REGISTRO';
+    return;
+  }
+
+  // Indicativo obligatorio
+  if (!waData.indicativo) {
+    alert('Indicativo no válido para el país seleccionado');
+    btn.disabled = false;
+    btn.textContent = 'ENVIAR REGISTRO';
+    return;
+  }
+
+  // Celular mínimo 7 dígitos
+  if (!waData.celular || waData.celular.length < 7) {
+    alert('Número de celular no válido');
+    btn.disabled = false;
+    btn.textContent = 'ENVIAR REGISTRO';
+    return;
+  }
+
+  // Código postal si está habilitado
+  const cpInput = document.querySelector('#codigo_postal');
+  if (cpInput && !cpInput.disabled && !cpInput.value.trim()) {
+    alert('Debe ingresar el código postal para este país');
+    btn.disabled = false;
+    btn.textContent = 'ENVIAR REGISTRO';
+    return;
+  }
+
+  // Segundo nombre
+  const segundoNombreInput = $('#segundo_nombre');
+  if (segundoNombreInput && !segundoNombreInput.value.trim()) {
+    segundoNombreInput.value = 'N/A';
+  }
+
+btn.disabled = true;
+btn.textContent = 'ENVIANDO...';
+
+  // Política de datos
+  if (!$('#chkAcepto').checked) {
+    alert('Debes aceptar el tratamiento de datos.');
+    btn.disabled = false;
+    btn.textContent = 'ENVIAR REGISTRO';
+    return;
+  }
+
+  // === DATOS CONTROLADOS ===
+  const tipoDocumento = $('#tipo_documento').value.trim().toUpperCase();
+
+  const servicios = Array.from(
+    document.querySelectorAll('.services-grid input[type="checkbox"]:checked')
+  ).map(ch => ch.value);
+
+  const escolaridadVal = $('#escolaridad').value
+    ? $('#escolaridad').value.trim().toUpperCase()
+    : null;
+
+  const generoVal = $('#genero').value
+    ? $('#genero').value.trim().toUpperCase()
+    : null;
+
+  const discapRadio = document.querySelector('input[name="discap"]:checked');
+  const discapacidadVal = discapRadio?.value === 'SI' ? 'SI' : 'NO';
+  const detalleDiscapacidadText =
+    discapacidadVal === 'SI'
+      ? ($('#cual').value.trim().toUpperCase() || 'NO ESPECIFICADO')
+      : null;
+
+  const aceptoPolitica = 'SI';
+
+  // === Telegram usuario ===
+  let telegramInput = $('#usuario_telegram').value.trim();
+  if (/^n\/?a$/i.test(telegramInput) || telegramInput === '') {
+    telegramInput = `NA_${Date.now()}`;
+  }
+
+  // === Telegram referencia ===
+  let refTelegram = $('#refTg').value.trim();
+  if (/^n\/?a$/i.test(refTelegram) || refTelegram === '') {
+    refTelegram = 'N/A';
+  }
+
+  // === WhatsApp referencia ===
+  let refWhatsapp = $('#refWa').value.trim();
+  if (/^n\/?a$/i.test(refWhatsapp) || refWhatsapp === '') {
+    refWhatsapp = 'N/A';
+  }
+
+  // === SAFE GETTERS ===
+  const safeVal = (id, def = null) => {
+    const el = document.querySelector(id);
+    return el ? el.value.trim() || def : def;
+  };
+
+  const safeChecked = (id) => {
+    const el = document.querySelector(id);
+    return el ? el.checked : false;
+  };
+
+  const safeInt = (id) => {
+    const el = document.querySelector(id);
+    return el && el.value ? parseInt(el.value, 10) : 0;
+  };
+
+
+
+const payload = {
+  nueva_persona: safeChecked('#nueva_persona') ? 'SI' : 'NO',
+  email: safeVal('#email')?.toLowerCase(),
+
+  // 🔹 Nombres
+  primer_nombre: safeVal('#primer_nombre'),
+  segundo_nombre: safeVal('#segundo_nombre', 'N/A'),
+  apellidos: safeVal('#apellidos'),
+
+  // 🔹 Documento
+  tipo_documento: tipoDocumento,
+  documento: safeVal('#cedula'),
+
+  // 🔹 Datos personales
+  fecha_nacimiento: safeVal('#nac'),
+  edad: safeInt('#edad'),
+
+  // 🔹 WhatsApp normalizado
+  indicativo: waData.indicativo,
+  celular: waData.celular,
+  whatsapp_id: waData.whatsapp_id,
+
+  // 🔹 Ubicación
+  pais: normalizarTexto(safeVal('#pais')),
+departamento: normalizarTexto(
+  safeVal('#estado')?.replace(/\s*(DEPARTMENT|STATE|PROVINCE)$/i, '')
+),
+  ciudad: normalizarTexto(safeVal('#ciudad')),
+  codigo_postal: safeVal('#codigo_postal'),
+  barrio: safeVal('#barrio'),
+  direccion: safeVal('#dir'),
+
+  // 🔹 Información social
+genero: normalizarTexto(safeVal('#genero')),
+escolaridad: normalizarTexto(safeVal('#escolaridad')),
+discapacidad: safeVal('input[name="discap"]:checked'),
+  detalle_discapacidad: safeVal('#cual'),
+
+  vivienda_propia: safeVal('input[name="vivienda_propia"]:checked'),
+
+  zona: safeVal('#zona'),
+  estrato: safeVal('#estrato'),
+
+  personas_en_hogar: safeInt('#conviven'),
+  personas_trabajan: safeInt('#conv_trab'),
+  adultos_mayores: safeInt('#conv_may'),
+  menores: safeInt('#conv_men'),
+
+  // 🔹 Otros
+  servicios: servicios.join(','),
+  hobbies: safeVal('#hobbies'),
+  emprendimiento: safeVal('#idea'),
+
+  // 🔹 Referencias
+  ref_nombre: safeVal('#refNom'),
+  ref_telegram: safeVal('#refTg', 'N/A'),
+  ref_whatsapp: safeVal('#refWa', 'N/A'),
+  usuario_telegram: safeVal('#usuario_telegram'),
+
+  acepto_politica: safeChecked('#chkAcepto') ? 'SI' : 'NO',
+ fecha_registro: new Date().toISOString().slice(0, 10) + ' 00:00:00'
+};
+
+  try {
+    const { error } = await supabase.from('registros_miembros').insert([payload]);
+
+    if (error) {
+      btn.disabled = false;
+      btn.textContent = 'ENVIAR REGISTRO';
+
+      if (error.code === '23505') {
+        if (error.message.includes('documento')) alert('⚠️ Documento ya registrado');
+        else if (error.message.includes('email')) alert('⚠️ Correo ya registrado');
+        else if (error.message.includes('usuario_telegram')) alert('⚠️ Telegram ya registrado');
+        else alert('⚠️ Número celular ya registrado');
+      } else {
+        alert('❌ Error al guardar');
+      }
+      return;
+    }
+
+   // ✅ ÉXITO FINAL
+hide($('#formRegistro'));
+show($('#gracias'));
+show($('#accesos'));
+
+    const btnWA = $('#btnWA');
+    const btnTG = $('#btnTG');
+
+    btnWA.classList.add('hidden');
+    btnTG.classList.add('hidden');
+
+    if (telegramInput.startsWith('NA_')) {
+      btnWA.href = WHATSAPP_NUMBER;
+      btnWA.classList.remove('hidden');
+    } else {
+      btnTG.href = TELEGRAM_LINK;
+      btnTG.classList.remove('hidden');
+    }
+
+    $('#verCedula').value = payload.documento;
+    alert('✅ Tu registro ha sido exitoso');
+
+  } catch (err) {
+    console.error(err);
+    btn.disabled = false;
+    btn.textContent = 'ENVIAR REGISTRO';
+    alert('❌ Error inesperado');
+  }
+});
+
+  // === Verificar registro ===
+  $('#btnVerificar').addEventListener('click', async () => {
+    const doc = $('#verCedula').value.trim();
+    const resEl = $('#verResultado');
+    if (!doc) { resEl.textContent = 'Digita tu número de cédula.'; return; }
+    try {
+      const { data, error } = await supabase
+        .from('registros_miembros')
+        .select('fecha_registro')
+        .eq('documento', doc)
+        .order('fecha_registro', { ascending: false })
+        .limit(1);
+      if (error) throw error;
+
+      if (data && data.length) {
+        const fecha = data[0].fecha_registro;
+        const dateStr = new Date(fecha).toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        resEl.innerHTML = '✅ Registro encontrado. Última actualización: <b>' + dateStr + '</b>.';
+      } else {
+        resEl.textContent = '❌ No encontramos registros con esa cédula.';
+      }
+    } catch (err) {
+      console.error(err);
+      resEl.textContent = 'No fue posible verificar ahora.';
+    }
+  });
+  
+</script>
+<script defer>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const paisSelect   = document.getElementById("pais");
+  const estadoSelect = document.getElementById("estado");
+  const ciudadSelect = document.getElementById("ciudad");
+  const indicativoSelect = document.getElementById("indicativo");
+
+  if (!paisSelect || !estadoSelect || !ciudadSelect) return;
+
+  // =============================
+  // CARGAR PAÍSES
+  // =============================
+  fetch("https://countriesnow.space/api/v0.1/countries")
+    .then(res => res.json())
+    .then(data => {
+      data.data.forEach(p => {
+        const opt = document.createElement("option");
+        opt.value = p.country;
+        opt.textContent = p.country;
+        paisSelect.appendChild(opt);
+      });
+    });
+
+  // =============================
+  // CAMBIO DE PAÍS
+  // =============================
+  paisSelect.addEventListener("change", () => {
+
+    // RESET
+    estadoSelect.innerHTML = `<option value="">Seleccione un departamento/estado</option>`;
+    ciudadSelect.innerHTML = `<option value="">Seleccione una ciudad</option>`;
+    estadoSelect.disabled = true;
+    ciudadSelect.disabled = true;
+
+    if (indicativoSelect) indicativoSelect.value = '';
+
+    if (!paisSelect.value) return;
+
+// -------- INDICATIVO AUTOMÁTICO --------
+fetch("https://countriesnow.space/api/v0.1/countries/codes", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ country: paisSelect.value })
+})
+  .then(res => res.json())
+  .then(data => {
+    if (!data?.data?.dial_code || !indicativoSelect) return;
+
+    const dial = data.data.dial_code.replace('+', '');
+
+    // 🔥 LIMPIAR SELECT
+    indicativoSelect.innerHTML = '';
+
+    // 🔥 CREAR OPCIÓN REAL
+    const opt = document.createElement('option');
+    opt.value = dial;
+    opt.textContent = `${data.data.dial_code} (${paisSelect.value})`;
+    opt.selected = true;
+
+    indicativoSelect.appendChild(opt);
+  });
+
+    // -------- ESTADOS / DEPARTAMENTOS --------
+    fetch("https://countriesnow.space/api/v0.1/countries/states", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ country: paisSelect.value })
+    })
+      .then(res => res.json())
+      .then(data => {
+        data.data.states.forEach(s => {
+
+          let limpio = s.name
+            .replace(/\s*department$/i, '')
+            .replace(/\s*state$/i, '')
+            .replace(/\s*province$/i, '')
+            .trim();
+
+          if (limpio.toUpperCase().includes('ARCHIPELAGO')) {
+            limpio = 'SAN ANDRÉS Y PROVIDENCIA';
+          }
+
+          const opt = document.createElement("option");
+          opt.value = limpio;        // PARA BD
+          opt.dataset.api = s.name;  // PARA API
+          opt.textContent = limpio;
+
+          estadoSelect.appendChild(opt);
+        });
+
+        estadoSelect.disabled = false;
+      });
+  });
+
+  // =============================
+  // CAMBIO DE ESTADO
+  // =============================
+  estadoSelect.addEventListener("change", () => {
+
+    ciudadSelect.innerHTML = `<option value="">Seleccione una ciudad</option>`;
+    ciudadSelect.disabled = true;
+
+    if (!estadoSelect.value) return;
+
+    const apiState = estadoSelect.selectedOptions[0]?.dataset.api;
+    if (!apiState) return;
+
+    fetch("https://countriesnow.space/api/v0.1/countries/state/cities", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        country: paisSelect.value,
+        state: apiState
+      })
+    })
+      .then(res => res.json())
+      .then(data => {
+        data.data.forEach(c => {
+          const opt = document.createElement("option");
+          opt.value = c;
+          opt.textContent = c;
+          ciudadSelect.appendChild(opt);
+        });
+        ciudadSelect.disabled = false;
+      });
+  });
+
+});
+</script>
+</body>
+</html>
